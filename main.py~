@@ -14,6 +14,7 @@ else:
 	var strength=raw_input("Ohh..New Course..Enter the strength of class")
 	c.execute("INSERT INTO course VALUES(?,?)",course,strength)
 
+
 if(course exist):
 
 else:
