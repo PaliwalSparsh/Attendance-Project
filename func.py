@@ -12,11 +12,11 @@ def take_attendace(strength):
 def course_exist(course,conn_obj):
 	for x in conn_obj.execute("SELECT name from courses;"):
 		if (x.lower())==(course.lower()):
-			return true
-	return false
+			return True
+	return False
 
 def create_course(course,strength,conn_obj):
-	conn_obj.execute("CREATE TABLE ? (roll int);",course)
+	conn_obj.execute('CREATE TABLE ? (roll int);',course)
 	for x in range(1,strength):
 		conn_obj.execute("INSERT INTO %s VALUES(%d);" %course %x)
 
