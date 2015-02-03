@@ -3,7 +3,7 @@
 import sqlite3
 import os.path
 
-def check_db():
+
 	if os.path.isfile("all.db"):
 		conn = sqlite3.connect("all.db")
 		c = conn.cursor()
