@@ -4,10 +4,10 @@ import sqlite3
 import os.path
 
 
-	if os.path.isfile("all.db"):
+if os.path.isfile("all.db"):
 		conn = sqlite3.connect("all.db")
 		c = conn.cursor()
-	else:
+else:
 		conn = sqlite3.connect("all.db")
 		c = conn.cursor()
 		c.execute("CREATE TABLE courses(name char,strength int);")
