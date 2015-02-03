@@ -18,6 +18,6 @@ def course_exist(course):
 def create_course(course,strength):
 	c.execute("CREATE TABLE ? (roll int);",course)
 	for x in range(1,strength):
-		c.execute("INSERT INTO %s VALUES(%d);",course,x)
+		c.execute("INSERT INTO %s VALUES(%d);" %course %x)
 
 if __name__ == "__main__":main()

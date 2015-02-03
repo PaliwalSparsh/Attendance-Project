@@ -6,7 +6,7 @@ import func
 
 #main
 def main():
-	check_db()
+	checkdb.check_db()
 	in_course = raw_input("Enter the course name.")
 	if course_exist(in_course) :
 		strength = c.execute("SELECT strength FROM courses where name=?;",in_course);
