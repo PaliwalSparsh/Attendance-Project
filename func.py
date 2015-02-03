@@ -9,15 +9,15 @@ def take_attendace(strength):
 		if (raw_input("").lower())=='A':
 			print "absent"
 
-def course_exist(course):
-	for x in c.execute("SELECT name from courses;"):
+def course_exist(course,conn_obj):
+	for x in conn_obj.execute("SELECT name from courses;"):
 		if (x.lower())==(course.lower()):
 			return true
 	return false
 
-def create_course(course,strength):
-	c.execute("CREATE TABLE ? (roll int);",course)
+def create_course(course,strength,conn_obj):
+	conn_obj.execute("CREATE TABLE ? (roll int);",course)
 	for x in range(1,strength):
-		c.execute("INSERT INTO %s VALUES(%d);" %course %x)
+		conn_obj.execute("INSERT INTO %s VALUES(%d);" %course %x)
 
 if __name__ == "__main__":main()
